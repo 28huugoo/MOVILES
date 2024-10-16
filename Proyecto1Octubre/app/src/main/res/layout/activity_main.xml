@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BED4E6"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/textoAltura"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="27dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:inputType="text"
+        android:text="Introduce la altura"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textoBase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textoBase" />
+
+    <EditText
+        android:id="@+id/textoBase"
+        android:layout_width="165dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="39dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:inputType="text"
+        android:text="Introduce la base"
+        app:layout_constraintBottom_toTopOf="@+id/botonCalcularCuadrado"
+        app:layout_constraintEnd_toStartOf="@+id/textoAltura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonCalcularTriangulo" />
+
+    <EditText
+        android:id="@+id/textoLado"
+        android:layout_width="235dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:inputType="text"
+        android:text="Introduce el lado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonCalcularCuadrado" />
+
+    <Button
+        android:id="@+id/botonCalcularCuadrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="20dp"
+        android:background="#2196F3"
+        android:backgroundTint="#2196F3"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="CALCULAR"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textoLado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etiquetaCuadrado"
+        app:layout_constraintTop_toBottomOf="@+id/textoBase" />
+
+    <Button
+        android:id="@+id/botonCalcularTriangulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="21dp"
+        android:background="#2196F3"
+        android:backgroundTint="#2196F3"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="CALCULAR"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textoBase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etiquetaTriangulo"
+        app:layout_constraintTop_toBottomOf="@+id/textoRadio" />
+
+    <TextView
+        android:id="@+id/etiquetaCuadrado"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="115dp"
+        android:fontFamily="serif"
+        android:text="CUADRADO"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botonCalcularCuadrado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etiquetaTriangulo" />
+
+    <TextView
+        android:id="@+id/etiquetaTriangulo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="113dp"
+        android:fontFamily="serif"
+        android:text="TRIÁNGULO"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/botonCalcularTriangulo"
+        app:layout_constraintEnd_toStartOf="@+id/botonCalcularTriangulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/botonCalcularTriangulo" />
+
+    <TextView
+        android:id="@+id/etiquetaTitulo"
+        android:layout_width="392dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="22dp"
+        android:fontFamily="cursive"
+        android:text="CÁLCULO DE PERÍMETROS Y ÁREA"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/botonCalcularCirculo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/etiquetaCirculo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="119dp"
+        android:fontFamily="serif"
+        android:text="CÍRCULO"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/botonCalcularCirculo"
+        app:layout_constraintEnd_toStartOf="@+id/botonCalcularCirculo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/botonCalcularCirculo" />
+
+    <Button
+        android:id="@+id/botonCalcularCirculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="25dp"
+        android:background="#2196F3"
+        android:backgroundTint="#2196F3"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="CALCULAR"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textoRadio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etiquetaCirculo"
+        app:layout_constraintTop_toBottomOf="@+id/etiquetaTitulo" />
+
+    <EditText
+        android:id="@+id/textoRadio"
+        android:layout_width="219dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:inputType="text"
+        android:text="Introduce el Radio"
+        app:layout_constraintBottom_toTopOf="@+id/botonCalcularTriangulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonCalcularCirculo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
